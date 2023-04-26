@@ -1,42 +1,176 @@
-#root {
-  max-width: 1280px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* GENARAL */
+body {
+  background-image: url("./assets//img/Model_Y.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  /* border: 2px solid red; */
+  max-width: 90vw;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* HEADER */
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > img {
+  height: 50%;
+}
+
+header :last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+header :last-child:hover {
+  background-color: gray;
+}
+
+/* MAIN */
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section {
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.8;
+  background-color: #fff;
+  height: 50vh;
+  width: 60vh;
+}
+
+main section :last-child {
+  display: flex;
+  align-items: center;
+}
+
+main section .buy {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+main section .buy:hover {
+  background-color: grey;
+}
+
+main .somme {
+  margin-right: 20px;
+  font-weight: bold;
+}
+main .select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 40vh;
+  padding: 10px;
+  border: 2px solid black;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
+main .select:hover {
+  border-color: red;
+}
+
+.selected {
+  background-color: gray;
+}
+
+main > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+main > div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+main > div > :first-child {
+  width: 150px;
+}
+main > div > :first-child > p {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+main > div div :first-child {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main > div div :last-child {
+  font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+main > div > :last-child {
+  border: 3px solid white;
+  padding: 10px 50px;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+main > div > :last-child:hover {
+  background-color: white;
+  color: grey;
 }
 
-.read-the-docs {
-  color: #888;
+/* FOOTER */
+footer {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+footer > p > span {
+  font-weight: bold;
 }
