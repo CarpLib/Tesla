@@ -39,6 +39,7 @@ export default function Main() {
           onClick={() => {
             setPaint1("selected");
             setPaint2();
+            setSomme(peinture !== 0 ? somme - 1000 : somme);
             setPeinture(0);
           }}
         >
@@ -47,9 +48,10 @@ export default function Main() {
         <div
           className={`select ${paint2}`}
           onClick={() => {
-            setPaint1();
             setPaint2("selected");
+            setPaint1();
             setPeinture(1000);
+            setSomme(peinture === 1000 ? somme : somme + 1000);
           }}
         >
           Noir Uni - 1 000 €
